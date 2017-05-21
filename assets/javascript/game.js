@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 document.onkeypress = function(e){
 	var userInput = e.key;
 
-	//if(){
+	if(isAlpha(userInput)){
 		if(userInput === letter){//Game Won
 			//gameWon = true;
 			gamesWon++;
@@ -77,5 +77,25 @@ document.onkeypress = function(e){
 		lst.textContent = guessList;
 		}
 
-	//}
+	}
 }
+
+function isAlpha(l){
+	var alpha = false;
+	for (var i = 0; i < alphabet.length; i++) {
+		if(l === alphabet[i]){
+			alpha = true;
+			i = alphabet.length;
+		}
+	}
+	return alpha;
+}
+
+// function newGuess(l){
+// 	var newInput = false;
+// 	for (var i = 0; i < guessList; i++){
+// 		if(l === guessList[i]){
+			
+// 		}
+// 	}
+// }
